@@ -1,6 +1,10 @@
 import spacy
 import nltk.data
 from textblob import TextBlob
+import numpy as np
+import csv
+import itertools
+zip = getattr(itertools, 'izip', zip)
 
 file = open('CultureRelatedDiaognosticIssues.txt','r')
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -8,6 +12,8 @@ tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 a = []
 names = []
 sentiments = []
+meanArr = []
+
 for line in file:
     miniList = line.split("|")
     names.append(int(miniList[0].strip()))
@@ -24,7 +30,21 @@ for i in range(len(a)):
         chapSents.append(line.sentiment.subjectivity)
     sentiments.append(chapSents)
 
-print(a[2])
+for j in range(len(sentiments)):
+    sentArray = sentiments[j]
+    mean = np.mean(sentArray)
+    meanArr.append(mean)
+
+with open('subjectivityScores.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(zip(names, meanArr))
+f.close()
+
+with open('chapterTextScore.csv', 'w') as f:
+    
+
+
+
 print()
-print(sentiments[2])
+print()
 print()
