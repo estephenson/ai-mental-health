@@ -37,11 +37,11 @@ for j in range(len(sentiments)):
     mean = np.mean(sentArray)
     meanArr.append(mean)
 
-# with open('subjectivityScores.csv', 'w') as f:
-#     writer = csv.writer(f)
-#     writer.writerows(zip(names, meanArr))
-# f.close()
-#
+with open('subjectivityScores.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(zip(names, meanArr))
+f.close()
+
 with open('subjectivityScorebySentence.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerows(zip(sentenceArr, sentiments))
