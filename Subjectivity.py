@@ -50,7 +50,7 @@ with open('subjectivityScorebySentence.csv', 'w') as f:
 f.close()
 
 json_data = json.dumps([{'chapter': text, 'sentiment scores': sentiments} for text, sentiments in zip(sentenceArr, sentiments)])
-with open('jsonData.txt', 'w') as outfile:
+with open('jsonData.json', 'w') as outfile:
      json.dump([{'chapter': text, 'sentiment scores': sentiments} for text, sentiments in zip(sentenceArr, sentiments)], outfile, sort_keys = True, indent = 4,
                ensure_ascii = False)
 
