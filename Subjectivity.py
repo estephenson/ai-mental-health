@@ -4,8 +4,10 @@ from textblob import TextBlob
 import numpy as np
 import csv
 import itertools
-zip = getattr(itertools, 'izip', zip)
+import json
 
+zip = getattr(itertools, 'izip', zip)
+data = {}
 file = open('CultureRelatedDiaognosticIssues.txt','r')
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
@@ -47,5 +49,11 @@ with open('subjectivityScorebySentence.csv', 'w') as f:
     writer.writerows(zip(sentenceArr, sentiments))
 f.close()
 
+json_data = json.dumps([{'chapter': text, 'sentiment scores': sentiments} for text, sentiments in zip(sentenceArr, sentiments)])
+with open('jsonData.txt', 'w') as outfile:
+     json.dump([{'chapter': text, 'sentiment scores': sentiments} for text, sentiments in zip(sentenceArr, sentiments)], outfile, sort_keys = True, indent = 4,
+               ensure_ascii = False)
+
+print(json_data)
 print(len(sentiments))
 print()
