@@ -1,4 +1,4 @@
-Subjectivity Score,Cluster,Top Words,Chapter,Diagnosis
+SubjectivityScore,Cluster,Top Words,Chapter,Diagnosis
 0.3,3,"[b'cultures', b's', b'individual', b'background', b'account', b'taken']",1,'Intellectual Disability (Intellectual Developmental Disorder)'
 0.130555556,6,"[b'african american',  b'rates']",1,'Autism Spectrum Disorder'
 0.15,6,"[b'african american',  b'rates']",1,'Attention-Deficit/Hyperactivity Disorder'
@@ -74,7 +74,7 @@ Subjectivity Score,Cluster,Top Words,Chapter,Diagnosis
 0.333333333,1,"[b'substance', b'using', b'using', b'opioid', b'cultures', b'regions']",16,'Other (or Unknown) Substance Withdrawal'
 0.252333333,6,"[b'african american',  b'rates']",16,'Gambling Disorder'
 0.311678241,5,"[b'languages', b'cultures', b'individual', b'speak', b'ideas', b'e.g.']",17,'Mild Neurocognitive Disorder'
-0.42030303,5,"[b'languages', b'cultures', b'individual', b'speak', b'ideas', b'e.g.']",17,'Major or Mild Neurocognitive Disorder Due to AlzheimerŠ—Ès Disease'
+0.42030303,5,"[b'languages', b'cultures', b'individual', b'speak', b'ideas', b'e.g.']",17,'Major or Mild Neurocognitive Disorder Due to Alzheimer_Ñés Disease'
 0.312962963,3,"[b'cultures', b's', b'individual', b'background', b'account', b'taken']",18,'General Personality Disorder'
 0.442708333,4,"[b'behaviors', b'personality', b'personality', b'consider', b'disorder', b""'antisocial""]",18,'Paranoid Personality Disorder'
 0.47172619,4,"[b'behaviors', b'personality', b'personality', b'consider', b'disorder', b""'antisocial""]",18,'Schizoid Personality Disorder'
