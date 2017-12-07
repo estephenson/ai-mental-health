@@ -4,18 +4,30 @@ function highlightText() {
 
    // document.getElementById("diagnosisHighlighted").innerHTML = "hello";
 
-   d3.csv('subjectivityScoreBySentence.csv', function(d) {
-      for(i=0; i<d.length; i++) {
-         // console.log(d[i].diagnosis);
-         // console.log(typeof d[i].score);
+   // d3.csv('subjectivityScoreBySentence.csv', function(d) {
+   //    for(i=0; i<d.length; i++) {
+   //       // console.log(d[i].diagnosis);
+   //       // console.log(typeof d[i].score);
+   //
+   //       if(d[i].diagnosis == "Intellectual Disability (Intellectual Developmental Disorder)") {
+   //          // document.getElementById("diagnosisHighlighted").innerHTML = d[i].text;
+   //          parseLists(d[i].score);
+   //       }
+   //    }
+   // });
 
-         if(d[i].diagnosis == "Intellectual Disability (Intellectual Developmental Disorder)") {
-            // document.getElementById("diagnosisHighlighted").innerHTML = d[i].text;
-            parseLists(d[i].score);
-         }
+   d3.json('jsonData.json', function(d) {
+      console.log(d[0].chapter);
+      for(i=0; i<d.length; i++) {
+         console.log(d[i].diagnosis);
+         // if(d[i].diagnosis == "Intellectual Disability (Intellectual Developmental Disorder)") {
+         //    // document.getElementById("diagnosisHighlighted").innerHTML = d[i].text;
+         // }
       }
    });
+
 }
+
 
 function parseLists(scores) {
    scores = scores.replace("[", "");
