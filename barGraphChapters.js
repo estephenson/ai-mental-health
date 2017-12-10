@@ -1,5 +1,4 @@
 function barGraphChapterAverages() {
-   console.log("hi");
    var width = 500;
    var height = 500;
 

@@ -1,7 +1,10 @@
+//some neat scrolling and zooming:
+//http://bl.ocks.org/nnattawat/9689303
+
 function main() {
    console.log("in main");
    drawBarGraph();
-   // highlightText();
+
 }
 
 function drawBarGraph() {
@@ -9,9 +12,10 @@ function drawBarGraph() {
        width = 1500 - margin.left - margin.right,
        height = 500 - margin.top - margin.bottom;
 
-   var svg = d3.select("body").append("svg")
+   var svg = d3.select("#barChart").append("svg")
        .attr("width", width + margin.left + margin.right)
        .attr("height", height + margin.top + margin.bottom)
+       .attr("class", "barChartSVG")
        .style("padding-bottom", "200px")
        .style("padding-left", "50px")
        .style("padding-right", "75px")
@@ -60,27 +64,10 @@ function drawBarGraph() {
             .attr("height", function(d) {
                return height - y(d["Subjectivity Score"]);
             })
-            //maybe instead of highlighting the current bar we add a label for
-            //the diagnosis?
-            // .on("mouseover", function() {
-            //    console.log("function");
-            //    d3.select(this).attr("fill", "orange");
-            // })
-            // .on("mouseout", function() {
-            //    d3.select(this).attr("fill", "#000");
-            // })
             .on("click", function(d) {
                console.log(d.Diagnosis);
                highlightText(d.Diagnosis);
             });
-
-            //come back to this in the event we want to highlight certain things
-            // .style("fill", function(d) {
-            //    console.log(colors);
-            //    // console.log(d.Cluster);
-            //    return "#000";
-            // });
-
    });
 
    var xAxis = d3.axisBottom()
@@ -91,25 +78,16 @@ function drawBarGraph() {
       .ticks(10, "%");
 }
 
-
-// d3.selectAll("#d3icon")
-// // .style("color", "black")
-// .on("click", function() {
-//    d3.select(this)
-//    .style("color", icon_color)
-
-
 function highlightText(searchTerm) {
 
-   console.log("in highlight func");
-   console.log(searchTerm);
-   var div = d3.select("body")
-      .append("div");
+   // var div = d3.select("#highlightText").append("div");
+
 
    d3.json('jsonData.json', function(d) {
 
       for(i=0; i<d.length; i++) {
-
+         var div = d3.select("#highlightText");
+         
          if (d[i].title == searchTerm) {
             //add the diagnosis title
             div.append("span")
