@@ -10,38 +10,65 @@
       <script src="testHighlight.js"></script>
 
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <link href="main.css" rel="stylesheet" />
       <title>AI Final Project</title>
 
 
       <style>
+      /* Styles title text*/
+      .chapterChart {
+         text-align:center;
+      }
+
+      .chartTitle {
+         font-family: 'Roboto', sans-serif;
+      }
+
+      .chapterSubjectivities {
+         padding-left:100px;
+      }
+      /* Creates the two-column layout for charts. */
       .column {
         float: left;
         width: 50%;
+        text-align: center;
       }
-         span {
-            font-family: 'Roboto', sans-serif;
-         }
-         </style>
+      /* Clear floats after the columns */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+      /*styles the buttons*/
+      .button {
+      }
+      </style>
    </head>
    <body>
-<div class="row">
+   <div class="row">
       <div class="chapterChart">
-      <h1 class="chartTitle">Cluster and Subjectivity Analysis by Chapter</h1>
+         <h1 class="chartTitle">Cluster and Subjectivity Analysis by Chapter</h1>
+         <div class="column">
+            <h2 class="chartTitle">Subjectivity Ranges Across Chapters</h2>
+            <iframe width="720" height="444" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRft73cRxIQf-u02eE29EAXm97ekQlAogB_r0qkIg1LN09hsv62yh8tNPD7u0TCV9IYkncKm9Dcvspa/pubchart?oid=1239500175&amp;format=interactive"></iframe>
+         </div>
+         <div class="column">
+            <h2 class="chartTitle">Clusters Across Chapters</h2>
+            <img src="cluster-chapter.png"></img>
+         </div>
+       </div>
+   </div>
+   <div class="row">
       <div class="column">
-<iframe width="720.5" height="444" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRft73cRxIQf-u02eE29EAXm97ekQlAogB_r0qkIg1LN09hsv62yh8tNPD7u0TCV9IYkncKm9Dcvspa/pubchart?oid=1239500175&amp;format=interactive"></iframe>
+         <span class="button">
+            <a href="http://localhost:7000/barChart.html">Explore Diagnosis Subjectivity</a>
+         </span>
       </div>
       <div class="column">
-        <img src="cluster-chapter.png"></img>
+         <span class="button">
+            Explore Text Searching
+         </span>
       </div>
-    </div>
-      <!-- <p>
-         <a href="http://localhost:8080/testing.html">link text</a>
-      </p> -->
+   </div>
 
-      <!-- <script>
-         main();
-         // highlightText();
-      </script> -->
    </body>
 </html>

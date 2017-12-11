@@ -15,19 +15,48 @@
          span {
             font-family: 'Roboto', sans-serif;
          }
-         /*.bar {
-            fill: #2296f3;
-         }*/
+         .bar {
+            fill: #424242;
+         }
+         #barChart {
+            height:800px;
+            overflow-x: auto;
+            overflow-y: auto;
+            margin-right:20px;
+         }
+         .column {
+          float: left;
+          width: 50%;
+         }
+         h2 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+         }
          </style>
    </head>
    <body>
 
-      <!-- <p>
-         <a href="http://localhost:8080/testing.html">link text</a>
-      </p> -->
 
-      <script>
-         main();
-      </script>
+      <div class="row">
+         <div class="column">
+         <h2>
+            Average Subjectivity Score of Diagnosis
+         </h2>
+         <div id="barChart">
+            <script>
+               main();
+            </script>
+         </div>
+         </div>
+
+         <div class="column">
+         <h2>Subjectivity Score of Diagnostic Text</h2>
+         <div id="highlightText">
+            <script>
+               highlightText();
+            </script>
+         </div>
+         </div>
+   </div>
    </body>
 </html>
