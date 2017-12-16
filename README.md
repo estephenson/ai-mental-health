@@ -1,2 +1,9 @@
 # How to Use this Repository
-To view the visualizations created in this repository, download it and run a local server in the project's directory. Navigate your browser to the correct localhost port, and the visualizations should display.
+
+TLDR: Run most* of our visualizations here: https://estephenson.github.io/ai-mental-health/
+
+\* We also have a Python visualization that runs from the command line. The visualization finds the occurence of a given word in the documents and plots a scatterplot of documents in which the word occurs. In order to run that visualization, clone this repository and cd into it. Run the following command: 
+
+python3 Search.py [search word]
+
+
