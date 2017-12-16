@@ -108,7 +108,7 @@ for line in file:
     a.append(miniList[1].strip())
 file.close()
 
-nlp = spacy.load('en')
+# nlp = spacy.load('en')
 for i in range(len(a)):
     chap = a[i]
     chapSents = []

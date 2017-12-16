@@ -2,11 +2,11 @@
 //http://bl.ocks.org/nnattawat/9689303
 
 function main() {
-   console.log("in main");
    drawBarGraph();
-
 }
 
+
+//THIS IS THE ONE THAT HIGHLIGHTS
 function drawBarGraph() {
    var margin = {top: 20, right: 20, bottom: 30, left: 40},
        width = 1500 - margin.left - margin.right,
@@ -65,7 +65,6 @@ function drawBarGraph() {
                return height - y(d["Subjectivity Score"]);
             })
             .on("click", function(d) {
-               console.log(d.Diagnosis);
                highlightText(d.Diagnosis);
             });
    });
@@ -80,14 +79,11 @@ function drawBarGraph() {
 
 function highlightText(searchTerm) {
 
-   // var div = d3.select("#highlightText").append("div");
-
-
    d3.json('jsonData.json', function(d) {
 
       for(i=0; i<d.length; i++) {
          var div = d3.select("#highlightText");
-         
+
          if (d[i].title == searchTerm) {
             //add the diagnosis title
             div.append("span")
@@ -108,6 +104,7 @@ function highlightText(searchTerm) {
       }
    });
 }
+
 
 function findColor(intensity) {
    var colors = ["#FFFDE7", "#FFF9C4", "#FFF59D", "#FFF176", "#FFEE58", "#FFEB3B", "#FDD835", "#FBC02D", "#F9A825", "#F57F17"];

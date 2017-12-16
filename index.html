@@ -22,10 +22,6 @@
       .chartTitle {
          font-family: 'Roboto', sans-serif;
       }
-
-      .chapterSubjectivities {
-         padding-left:100px;
-      }
       /* Creates the two-column layout for charts. */
       .column {
         float: left;
@@ -38,8 +34,28 @@
           display: table;
           clear: both;
       }
+      .row {
+         padding-bottom: 40px;
+      }
+      img {
+         /*padding-left:100px;*/
+         /*width: 100%;
+         overflow: hidden;*/
+         /*width:100%;
+         height:auto;
+         overflow: hidden;*/
+      }
       /*styles the buttons*/
       .button {
+         font-family: 'Roboto', sans-serif;
+         background-color: #B39DDB;
+         color: black;
+         padding: 10px 10px 10px 10px;
+         border-radius: 5px;
+      }
+      .button a:link {
+         color: black;
+         text-decoration: none;
       }
       </style>
    </head>
@@ -49,7 +65,7 @@
          <h1 class="chartTitle">Cluster and Subjectivity Analysis by Chapter</h1>
          <div class="column">
             <h2 class="chartTitle">Subjectivity Ranges Across Chapters</h2>
-            <iframe width="720" height="444" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRft73cRxIQf-u02eE29EAXm97ekQlAogB_r0qkIg1LN09hsv62yh8tNPD7u0TCV9IYkncKm9Dcvspa/pubchart?oid=1239500175&amp;format=interactive"></iframe>
+            <iframe width="626.5" height="444" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRft73cRxIQf-u02eE29EAXm97ekQlAogB_r0qkIg1LN09hsv62yh8tNPD7u0TCV9IYkncKm9Dcvspa/pubchart?oid=1239500175&amp;format=interactive"></iframe>
          </div>
          <div class="column">
             <h2 class="chartTitle">Clusters Across Chapters</h2>
@@ -60,14 +76,14 @@
    <div class="row">
       <div class="column">
          <span class="button">
-            <a href="http://localhost:7000/barChart.html">Explore Diagnosis Subjectivity</a>
+            <a href="barChart.html">Explore Diagnosis Subjectivity</a>
          </span>
       </div>
-      <div class="column">
+      <!-- <div class="column">
          <span class="button">
-            Explore Text Searching
+            <a href="search.html">Explore Text Searching</a>
          </span>
-      </div>
+      </div> -->
    </div>
 
    </body>
