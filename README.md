@@ -6,11 +6,12 @@ TLDR: Run most* of our visualizations here: https://estephenson.github.io/ai-men
 
 python3 Search.py [search word]
 
-Full descriptions of the files: 
+
+# Full descriptions of the files: 
 1. Running the k-means algorithm: Clustering.py
 2. Running the sentiment analysis to get subjectivity scores: Subjectivity.py
 3. Creating the Python search visualization: Search.py
-4. Creating the D3 visualizations 
+4. Creating the D3 visualizations: index.html, barChart.html, testHighlight.js.
 
 The rest of the files are different formats of the data we needed for our visualizations. 
 
