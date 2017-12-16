@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- This file represents our core visualizations for the AI final project. -->
+<html>
+   <head>
+      <!-- import d3 (v4)-->
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <!-- import my functions -->
+      <script src="testHighlight.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link href="main.css" rel="stylesheet" />
+      <title>AI Final Project</title>
+
+
+      <style>
+         span {
+            font-family: 'Roboto', sans-serif;
+         }
+         .bar {
+            fill: #424242;
+         }
+         #barChart {
+            height:800px;
+            overflow-x: auto;
+            overflow-y: auto;
+            margin-right:20px;
+         }
+         .column {
+          float: left;
+          width: 50%;
+         }
+         .top-style {
+            font-family: 'Roboto', sans-serif;
+            padding-left: 30px;
+         }
+         </style>
+   </head>
+   <body>
+
+      <div class="top-style">
+         <h2 style="text-align:left">Search for Diagnositic Keywords</h2>
+         <form id="searchText">
+           Search Text: <input type="text" name="searchText" id="text">
+           <input type="button" onclick="getText()" value="Submit">
+         </form>
+      </div>
+
+      <div id="barChart">
+         <!-- <script>
+            main();
+         </script> -->
+      </div>
+
+   </body>
+</html>
